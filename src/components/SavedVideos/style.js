@@ -51,21 +51,39 @@ export const VideosContainer = styled.ul`
   }
 `
 export const NoSavedVideosContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  padding: 30px 20px;
+
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
-  margin-top: 50px;
 `
 
 export const NoSavedVideos = styled.img`
-  width: 50%;
+  width: 70%;
+  max-width: 360px;
+  margin-bottom: 20px;
 `
 export const NoSavesVideosText = styled.h1`
-  color: ${props => (!props.darkMode ? '#0f0f0f' : '#f9f9f9')};
+  font-family: 'Roboto';
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.4;
+  text-align: center;
+
+  color: ${props => (props.theme === true ? '#000000' : '#ffffff')};
 `
 
 export const NoSavedVideosSuggestion = styled.p`
-  color: ${props => (!props.darkMode ? '#0f0f0f' : '#f9f9f9')};
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 1.4;
+  text-align: center;
+
+  color: ${props => (props.theme === true ? '#000000' : '#ffffff')};
 `
 
 export const SavedVideoHeaderContainer = styled.div`

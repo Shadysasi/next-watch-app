@@ -91,7 +91,7 @@ class Trending extends Component {
                     <HiOutlineFire size="25px" color="red" />
                   )}
                 </IconContainer>
-                <Heading>Trending</Heading>
+                <Heading theme={isDarkTheme}>Trending</Heading>
               </HeadContainer>
               <VideoDetailsContainer>
                 {trendingList.map(eachItem => (

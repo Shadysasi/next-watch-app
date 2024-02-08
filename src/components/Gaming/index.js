@@ -84,7 +84,7 @@ class Gaming extends Component {
                 <IconContainer theme={isDarkTheme}>
                   <SiYoutubegaming size="25px" color="red" />
                 </IconContainer>
-                <Heading>Gaming</Heading>
+                <Heading theme={isDarkTheme}>Gaming</Heading>
               </HeadContainer>
               <GameDetailsContainer>
                 {gamingList.map(eachItem => (

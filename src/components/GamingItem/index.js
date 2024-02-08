@@ -1,11 +1,11 @@
 import ThemeContext from '../../Context/ThemeContext'
 import {
-  GameListItem,
+  GameCard,
+  GameThumbnail,
+  GameDetailsContainer,
+  GameName,
+  ViewCount,
   NavLink,
-  ThumbnailImg,
-  AboutContainer,
-  GameTitle,
-  ViewsText,
 } from './style'
 
 const GamingItem = props => {
@@ -18,17 +18,21 @@ const GamingItem = props => {
         const {isDarkTheme} = value
 
         return (
-          <NavLink to={`/videos/${id}`}>
-            <GameListItem>
-              <ThumbnailImg src={thumbnailUrl} alt="video thumbnail" />
-
-              <AboutContainer>
-                <GameTitle theme={isDarkTheme}>{title}</GameTitle>
-
-                <ViewsText>{`${viewCount} Watching Worldwide`}</ViewsText>
-              </AboutContainer>
-            </GameListItem>
-          </NavLink>
+          <GameCard>
+            <NavLink to={`/videos/${id}`}>
+              <GameThumbnail
+                src={thumbnailUrl}
+                alt="video thumbnail"
+                loading="lazy"
+              />
+              <GameDetailsContainer>
+                <GameName theme={isDarkTheme}>{title}</GameName>
+                <ViewCount
+                  theme={isDarkTheme}
+                >{`${viewCount} Watching Worldwide`}</ViewCount>
+              </GameDetailsContainer>
+            </NavLink>
+          </GameCard>
         )
       }}
     </ThemeContext.Consumer>

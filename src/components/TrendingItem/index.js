@@ -32,7 +32,7 @@ const TrendingItem = props => {
               <VideoThumbnailImg src={thumbnailUrl} alt="video thumbnail" />
 
               <AboutContainer>
-                <VideoTitle darkMode={isDarkTheme}>{title}</VideoTitle>
+                <VideoTitle theme={isDarkTheme}>{title}</VideoTitle>
                 <ChannelText>{channelName}</ChannelText>
                 <ViewsAndPublishedContainer>
                   <ChannelText>{`${viewCount} views`}</ChannelText>

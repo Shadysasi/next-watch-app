@@ -62,8 +62,8 @@ export const GameDetailsContainer = styled.ul`
   padding-left: 10px;
 
   display: flex;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
   flex-wrap: wrap;
 
   @media screen and (min-width: 768px) {

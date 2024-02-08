@@ -2,22 +2,52 @@ import {Link} from 'react-router-dom'
 import styled from 'styled-components'
 
 export const VideoListItem = styled.li`
-  width: 90%;
-  margin-right: 20px;
+  list-style-type: none;
+
+  width: 100%;
+  max-width: 900px;
   margin-bottom: 20px;
+
   display: flex;
-  margin-bottom: 30px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  @media screen and (min-width: 567px) {
+    margin-bottom: 40px;
+    flex-direction: row;
+  }
 `
 export const VideoThumbnailImg = styled.img`
-  width: 40%;
-  margin-right: 30px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  @media screen and (min-width: 567px) {
+    width: 47%;
+    margin-right: 16px;
+  }
 `
 
-export const AboutContainer = styled.div``
+export const AboutContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  flex-grow: 1;
+`
 export const VideoTitle = styled.p`
-  color: ${props => (!props.darkMode ? 'black' : '#ffffff')};
-  font-size: 18px;
-  font-size: 600;
+  margin-top: 2px;
+  margin-bottom: 2px;
+
+  font-family: 'Roboto';
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.3;
+
+  color: ${props => (props.theme === true ? '#000000' : '#ffffff')};
+  @media screen and (min-width: 567px) {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
 `
 export const ChannelText = styled.p`
   font-size: 16px;
@@ -29,5 +59,5 @@ export const ViewsAndPublishedContainer = styled.div`
 `
 export const NavLink = styled(Link)`
   text-decoration: none;
-  margin-bottom: 10px;
+  width: 100%;
 `

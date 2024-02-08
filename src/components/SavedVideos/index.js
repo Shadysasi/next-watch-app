@@ -26,15 +26,15 @@ const SavedVideos = () => (
       console.log(savedVideosList)
       const renderSavedVideos = () => (
         <>
-          <HeadContainer darkMode={isDarkTheme}>
-            <IconContainer darkMode={isDarkTheme}>
+          <HeadContainer theme={isDarkTheme}>
+            <IconContainer theme={isDarkTheme}>
               {isDarkTheme ? (
                 <HiFire size="25px" color="red" />
               ) : (
                 <HiOutlineFire size="25px" color="red" />
               )}
             </IconContainer>
-            <Heading darkMode={isDarkTheme}>Saved Videos</Heading>
+            <Heading theme={isDarkTheme}>Saved Videos</Heading>
           </HeadContainer>
           <VideosContainer>
             {savedVideosList.map(eachItem => (
@@ -45,24 +45,21 @@ const SavedVideos = () => (
       )
 
       return (
-        <SavedVideoPageContainer>
+        <SavedVideoPageContainer theme={isDarkTheme}>
           <Header />
-          <SavedVideosContainer
-            data-testid="savedVideos"
-            darkMode={isDarkTheme}
-          >
+          <SavedVideosContainer data-testid="savedVideos">
             <SideBar />
-            <SavedVideosContentContainer darkMode={isDarkTheme}>
+            <SavedVideosContentContainer>
               {savedVideosList.length === 0 ? (
                 <NoSavedVideosContainer>
                   <NoSavedVideos
                     alt="no saved videos"
                     src="https://assets.ccbp.in/frontend/react-js/nxt-watch-no-saved-videos-img.png"
                   />
-                  <NoSavesVideosText darkMode={isDarkTheme}>
+                  <NoSavesVideosText theme={isDarkTheme}>
                     No saved videos found
                   </NoSavesVideosText>
-                  <NoSavedVideosSuggestion darkMode={isDarkTheme}>
+                  <NoSavedVideosSuggestion theme={isDarkTheme}>
                     Save your videos by clicking a button
                   </NoSavedVideosSuggestion>
                 </NoSavedVideosContainer>

@@ -1,9 +1,9 @@
 import {Link} from 'react-router-dom'
 import styled from 'styled-components'
 
-export const GameListItem = styled.li`
+export const GameCard = styled.li`
   list-style-type: none;
-  width: 30%;
+  width: 45%;
   margin-right: 8px;
   margin-left: 8px;
   margin-bottom: 16px;
@@ -24,12 +24,12 @@ export const GameListItem = styled.li`
     width: 18%;
   }
 `
-export const ThumbnailImg = styled.img`
+export const GameThumbnail = styled.img`
   width: 100%;
   margin-bottom: 10px;
 `
 
-export const AboutContainer = styled.div`
+export const GameDetailsContainer = styled.div`
   width: 100%;
   padding: 4px;
 
@@ -37,7 +37,8 @@ export const AboutContainer = styled.div`
   flex-direction: column;
   align-items: flex-start;
 `
-export const GameTitle = styled.p`
+
+export const GameName = styled.p`
   margin: 2px;
 
   font-family: 'Roboto';
@@ -47,7 +48,7 @@ export const GameTitle = styled.p`
 
   color: ${props => (props.theme === true ? '#000000' : '#ffffff')};
 `
-export const ViewsText = styled.p`
+export const ViewCount = styled.p`
   margin: 2px;
 
   font-family: 'Roboto';

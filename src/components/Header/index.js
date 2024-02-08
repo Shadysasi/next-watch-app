@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom'
 import {BsMoon, BiSun, GiHamburgerMenu, MdClose} from 'react-icons/all'
-import SideBar from '../SideBar'
+import NavigationMenu from '../NavigationMenu'
 import LogoutPopup from '../LogoutPopup'
 import LogoutMobilePopup from '../LogoutMobilePopup'
 
@@ -50,7 +50,7 @@ const Header = () => (
             <MdClose className="nav-item-icon" />
           </MenuCloseIconBtn>
           <NavigationMenuContainer>
-            <SideBar />
+            <NavigationMenu />
           </NavigationMenuContainer>
         </MobileNavigationMenu>
       )
